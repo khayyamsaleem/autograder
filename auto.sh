@@ -11,6 +11,7 @@ do
 	cp "$PY" .
 	MYPY=($x*.py)
 	echo >> $MYPY
+	dos2unix $MYPY
 	cat script_hw$HW.py >> $MYPY
 	echo running $MYPY "($x)"
 	python3 "$MYPY"
